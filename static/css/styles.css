@@ -1,0 +1,66 @@
+body {
+    background-color: #f9f9f9;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.logo-circle {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.team-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.letter-red {
+  color: red;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.2); /* subtle left shadow */
+}
+
+.letter-white {
+  color: white;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.letter-orange {
+  color: orange;
+  text-shadow: -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.navbar-logo {
+  height: 40px; /* Matches text height */
+  width: auto;
+  margin-right: 80px;
+  vertical-align: middle;
+  background-color: rgb(230, 227, 227);
+}
+#preview {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+
+
+

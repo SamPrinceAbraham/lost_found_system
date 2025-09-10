@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4">Report a Lost Item</h2>
+<form method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label class="form-label">Your Name</label>
+    <input type="text" class="form-control" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Item Description</label>
+    <textarea class="form-control" name="description" rows="3" required></textarea>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Location Lost</label>
+    <input type="text" class="form-control" name="location" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Contact Info</label>
+    <input type="text" class="form-control" name="contact" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Upload Image</label>
+    <input type="file" class="form-control" name="image" accept="image/*" capture="environment" onchange="previewImage(event)" required>
+  </div>
+
+  <!-- Image Preview -->
+  <div class="mb-3 text-center">
+    <img id="preview" src="" alt="Image Preview" style="max-width:200px; display:none; border:1px solid #ddd; padding:5px; border-radius:8px;">
+  </div>
+
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+
+<script>
+  function previewImage(event) {
+    const reader = new FileReader();
+    reader.onload = function(){
+      const output = document.getElementById('preview');
+      output.src = reader.result;
+      output.style.display = "block";
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+{% endblock %}

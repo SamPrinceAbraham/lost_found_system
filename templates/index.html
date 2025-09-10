@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Logo + Welcome -->
+<div class="text-center mt-5">
+  <h1 class="mt-3">Lost & Found Portal</h1>
+  <img src="{{ url_for('static', filename='logo.png') }}" alt="Tech Titans Logo" style="height: 400px; width: auto;">
+</div>
+
+
+<!-- Team + Quote -->
+<div class="text-center mt-5">
+
+  <h3 class="team-title">
+  <span class="letter-red">T</span>eam 
+  <span class="letter-red">T</span>ech 
+  <span class="letter-red">T</span>itans
+</h3>
+
+  
+
+  <p class="font-italic">“We are here to safeguard what you've lost – because every item matters.”</p>
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5 mb-3">
+  <hr>
+  <p class="text-muted">&copy; 2025 Tech Titans. All rights reserved.</p>
+</footer>
+
+{% endblock %}

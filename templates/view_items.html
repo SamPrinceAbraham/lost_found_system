@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">All Lost & Found Items</h2>
+    <div class="row">
+        {% for item in items %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='uploads/' + item[6]) }}" 
+                     class="card-img-top" alt="Item Image" style="height:220px; object-fit:cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item[2] }}</h5>
+                    <p class="card-text"><strong>Type:</strong> {{ item[1] }}</p>
+                    <p class="card-text"><strong>Description:</strong> {{ item[3] }}</p>
+                    <p class="card-text"><strong>Location:</strong> {{ item[4] }}</p>
+                    <p class="card-text"><strong>Contact:</strong> {{ item[5] }}</p>
+                    <p class="card-text"><small class="text-muted">Posted on {{ item[7] }}</small></p>
+
+                    <!-- DELETE BUTTON -->
+                    <form action="{{ url_for('delete_item', id=item[0]) }}" method="POST" 
+                          onsubmit="return confirm('Are you sure you want to delete this item?');">
+                        <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
