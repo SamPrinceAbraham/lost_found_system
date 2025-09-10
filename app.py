@@ -32,12 +32,11 @@ sender_email = "lostandfound.act@gmail.com"
 app_password = "ohehmwbnkjzgtxgg"  # App password
 
 recipients = [
-    "23cse171@act.edu.in",
-    "23cse153@act.edu.in", # Sathya
-    "23cse144@act.edu.in", # R
-    "23cse135@act.edu.in", # Sam
-    # "23cse131@act.edu.in", # Rohit
-    # "kalarani.cse@act.edu.in" # Kalarani mam
+    "23cse171@act.edu.in", # Tamil Selva
+    "23cse153@act.edu.in", # Sathyanesar
+    "23cse144@act.edu.in", # R Sanjay
+    "23cse135@act.edu.in", # Sam Prince
+    "kalarani.cse@act.edu.in" # Kalarani mam
 ]
 
 # 📧 Send Email with Inline Image
